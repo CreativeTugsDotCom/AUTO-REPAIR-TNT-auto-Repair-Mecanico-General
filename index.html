@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klassen Law Office | General Practice Attorney in Edmonton, AB</title>
-    <meta name="description" content="Klassen Law Office offers experienced legal representation for individuals and families in Edmonton, Alberta. Criminal defense, family law, divorce, impaired driving, and general legal practice.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>TNT Auto Repair / Mecánico General | East Los Angeles Auto Shop</title>
+    <meta name="description" content="Reliable general mechanical repairs, engine diagnostics, brakes, A/C service, and oil changes in East Los Angeles. Honest service and fair pricing at 4739 Telegraph Rd.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,741 +13,870 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: {
-                            900: '#0B132B',
-                            800: '#1C2541',
-                            700: '#2A385B',
-                            50: '#F0F4F8'
-                        },
-                        gold: {
-                            500: '#C5A059',
-                            600: '#B28E46',
-                            400: '#D8B570',
-                            100: '#F7F3E9',
-                            50: '#FAF7F0'
-                        },
-                        charcoal: {
-                            900: '#191919',
-                            800: '#2C2C2C',
-                            600: '#555555',
-                            50: '#F8F9FA'
+                        brand: {
+                            red: '#dc2626',
+                            redhover: '#b91c1c',
+                            dark: '#0f172a',
+                            slate: '#1e293b',
+                            accent: '#f59e0b',
+                            graybg: '#f8fafc'
                         }
                     },
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom CSS Styles -->
     <style>
-        .gold-border-gradient {
-            border-image: linear-gradient(to right, #C5A059, #EAD39C, #C5A059) 1;
+        .hero-pattern {
+            background-color: #0d1117;
+            background-image: radial-gradient(rgba(220, 38, 38, 0.15) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.08);
         }
 
-        .gold-glow {
-            box-shadow: 0 0 25px rgba(197, 160, 89, 0.25);
-        }
-
-        .hero-overlay {
-            background: linear-gradient(135deg, rgba(11, 19, 43, 0.92) 0%, rgba(28, 37, 65, 0.85) 50%, rgba(11, 19, 43, 0.95) 100%);
-        }
-
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Ambient floating light animation */
-        @keyframes ambientFloat {
-            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
-            50% { transform: translateY(-15px) scale(1.05); opacity: 0.6; }
-        }
-
-        .ambient-orb {
-            animation: ambientFloat 8s ease-in-out infinite;
-        }
-
-        /* Subtle hero zoom */
-        @keyframes heroZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.08); }
-        }
-
-        .hero-bg-animate {
-            animation: heroZoom 20s ease-out forwards;
-        }
-
-        /* Glassmorphism effects */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
+        .glass-header {
+            background: rgba(15, 23, 42, 0.92);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(197, 160, 89, 0.15);
-        }
-
-        .nav-solid {
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px -2px rgba(11, 19, 43, 0.08);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-        }
-
-        .nav-solid .nav-logo-text {
-            color: #0B132B !important;
-        }
-
-        .nav-solid .nav-link {
-            color: #2C2C2C !important;
-        }
-
-        .nav-solid .nav-link:hover {
-            color: #C5A059 !important;
-        }
-
-        .nav-solid .mobile-menu-btn {
-            color: #0B132B !important;
         }
 
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 10px;
         }
         ::-webkit-scrollbar-track {
-            background: #0B132B;
+            background: #0f172a;
         }
         ::-webkit-scrollbar-thumb {
-            background: #C5A059;
-            border-radius: 4px;
+            background: #334155;
+            border-radius: 5px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #D8B570;
+            background: #dc2626;
+        }
+
+        .animate-pulse-subtle {
+            animation: pulse-slow 3s infinite ease-in-out;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.95; transform: scale(1.02); }
         }
     </style>
 </head>
-<body class="bg-charcoal-50 font-sans text-charcoal-800 antialiased selection:bg-gold-500 selection:text-white">
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-red-600 selection:text-white">
 
-    <!-- HEADER SECTION -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 lg:py-5 border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between">
-                
-                <!-- Brand Logo -->
-                <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded border border-gold-500/40 bg-navy-900/40 flex items-center justify-center transition-transform group-hover:scale-105">
-                        <i class="fa-solid fa-scale-balanced text-gold-500 text-lg"></i>
-                    </div>
-                    <div>
-                        <span class="nav-logo-text font-serif text-xl sm:text-2xl font-bold tracking-wider text-white transition-colors duration-300 block leading-none">
-                            KLASSEN LAW OFFICE
-                        </span>
-                        <span class="text-xs uppercase tracking-widest text-gold-500 font-medium block mt-1">
-                            General Practice Attorney
-                        </span>
-                    </div>
+    <!-- Top Announcement Bar -->
+    <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+                <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block"></span>
+                    <span id="shopStatusText">Open Today: 9:00 AM – 5:00 PM</span>
+                </span>
+                <span class="hidden md:inline text-slate-600">•</span>
+                <span class="hidden md:flex items-center gap-1 text-slate-400">
+                    <i class="fa-solid fa-location-dot text-brand-red"></i> 4739 Telegraph Rd, Los Angeles, CA 90022
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <span class="text-amber-400 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-language text-brand-red"></i> Se Habla Español / English
+                </span>
+                <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-red-600/20 text-red-400 text-[10px] uppercase font-bold tracking-wider">
+                    <i class="fa-solid fa-star text-amber-400 mr-1"></i>5-Star Rated Low Cost Mechanic
+                </span>
+                <a href="tel:3237801262" class="hover:text-white transition flex items-center gap-1 font-semibold text-slate-200">
+                    <i class="fa-solid fa-phone text-brand-red"></i> (323) 780-1262
                 </a>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-sm uppercase tracking-wider font-medium text-white/90 hover:text-gold-500 transition-colors">Home</a>
-                    <a href="#about" class="nav-link text-sm uppercase tracking-wider font-medium text-white/90 hover:text-gold-500 transition-colors">About</a>
-                    <a href="#services" class="nav-link text-sm uppercase tracking-wider font-medium text-white/90 hover:text-gold-500 transition-colors">Services</a>
-                    <a href="#why-choose-us" class="nav-link text-sm uppercase tracking-wider font-medium text-white/90 hover:text-gold-500 transition-colors">Why Choose Us</a>
-                    <a href="#testimonials" class="nav-link text-sm uppercase tracking-wider font-medium text-white/90 hover:text-gold-500 transition-colors">Testimonials</a>
-                    <a href="#contact" class="nav-link text-sm uppercase tracking-wider font-medium text-white/90 hover:text-gold-500 transition-colors">Contact</a>
-                </nav>
-
-                <!-- Header Action Button -->
-                <div class="hidden sm:flex items-center">
-                    <a href="tel:7804138077" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-500 text-navy-900 font-semibold px-5 py-2.5 rounded text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-gold-500/20 flex items-center gap-2 group">
-                        <i class="fa-solid fa-phone text-navy-900 group-hover:rotate-12 transition-transform"></i>
-                        <span>CALL OUR OFFICE <strong class="ml-1 tracking-normal font-bold">(780) 413-8077</strong></span>
-                    </a>
-                </div>
-
-                <!-- Mobile Navigation Toggle -->
-                <button id="mobile-menu-toggle" aria-label="Toggle navigation menu" class="mobile-menu-btn lg:hidden text-white text-2xl focus:outline-none p-2">
-                    <i class="fa-solid fa-bars" id="menu-icon"></i>
-                </button>
             </div>
         </div>
+    </div>
 
-        <!-- Mobile Drawer Menu -->
-        <div id="mobile-drawer" class="hidden lg:hidden bg-navy-900 border-b border-gold-500/30 px-6 py-6 shadow-2xl transition-all duration-300">
-            <nav class="flex flex-col space-y-4">
-                <a href="#home" class="mobile-nav-link text-white hover:text-gold-500 font-medium tracking-wide py-2 border-b border-white/5">Home</a>
-                <a href="#about" class="mobile-nav-link text-white hover:text-gold-500 font-medium tracking-wide py-2 border-b border-white/5">About</a>
-                <a href="#services" class="mobile-nav-link text-white hover:text-gold-500 font-medium tracking-wide py-2 border-b border-white/5">Services</a>
-                <a href="#why-choose-us" class="mobile-nav-link text-white hover:text-gold-500 font-medium tracking-wide py-2 border-b border-white/5">Why Choose Us</a>
-                <a href="#testimonials" class="mobile-nav-link text-white hover:text-gold-500 font-medium tracking-wide py-2 border-b border-white/5">Testimonials</a>
-                <a href="#contact" class="mobile-nav-link text-white hover:text-gold-500 font-medium tracking-wide py-2 border-b border-white/5">Contact</a>
-                <div class="pt-4 flex flex-col gap-3">
-                    <a href="tel:7804138077" class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold text-center py-3 rounded text-sm uppercase tracking-wider flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-phone"></i> CALL (780) 413-8077
-                    </a>
-                    <button onclick="openConsultationModal()" class="border border-gold-500 text-gold-500 hover:bg-gold-500/10 font-bold text-center py-3 rounded text-sm uppercase tracking-wider">
-                        Request Consultation
-                    </button>
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-header border-b border-slate-800 text-white transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-11 h-11 bg-gradient-to-br from-brand-red to-red-800 rounded-lg flex items-center justify-center text-white text-xl font-black shadow-lg shadow-red-900/40 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-wrench"></i>
                 </div>
+                <div>
+                    <div class="font-display font-black text-xl sm:text-2xl tracking-tight leading-none text-white">
+                        TNT <span class="text-brand-red">AUTO REPAIR</span>
+                    </div>
+                    <div class="text-[10px] tracking-widest text-slate-400 font-semibold uppercase mt-0.5">
+                        Mecánico General • East LA
+                    </div>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="#home" class="hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Home</a>
+                <a href="#about" class="hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">About</a>
+                <a href="#services" class="hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Services</a>
+                <a href="#why-us" class="hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Why Choose Us</a>
+                <a href="#reviews" class="hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Reviews</a>
+                <a href="#contact" class="hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Contact</a>
             </nav>
+
+            <!-- Action CTA Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <button onclick="openModal()" class="px-4 py-2.5 rounded-lg border border-slate-700 hover:border-brand-red bg-slate-800/80 hover:bg-slate-800 text-slate-200 text-xs font-semibold uppercase tracking-wider transition">
+                    <i class="fa-solid fa-calculator text-brand-red mr-1.5"></i> Estimate Calculator
+                </button>
+                <a href="tel:3237801262" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-brand-red to-red-700 hover:from-red-600 hover:to-red-800 text-white font-bold text-sm shadow-md shadow-red-900/30 transition hover:shadow-red-900/60 flex items-center gap-2">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <span>Call Now</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 focus:outline-none" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-red">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-red">About Us</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-red">Services</a>
+            <a href="#why-us" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-red">Why Choose Us</a>
+            <a href="#reviews" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-red">Customer Reviews</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-red">Contact & Location</a>
+            <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+                <button onclick="openModal(); toggleMobileMenu();" class="w-full py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-200 font-semibold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calculator text-brand-red"></i> Get Quick Estimate
+                </button>
+                <a href="tel:3237801262" class="w-full py-3 rounded-lg bg-brand-red hover:bg-red-700 text-white font-bold text-center text-sm shadow-md flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call (323) 780-1262
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-900 text-white pt-24 pb-16">
-        <!-- Hero Background Image with Subtle Zoom Animation -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000" 
-                 alt="Edmonton Law Office Courthouse and Legal Books" 
-                 class="w-full h-full object-cover object-center hero-bg-animate brightness-75 filter"
-                 onerror="this.src='https://placehold.co/1920x1080/0B132B/C5A059?text=Klassen+Law+Office+Edmonton'">
-            <div class="absolute inset-0 hero-overlay"></div>
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-slate-950 text-white overflow-hidden hero-pattern min-h-[90vh] flex items-center pt-8 pb-16">
+        
+        <!-- Background Overlay Image with Gradient Blur -->
+        <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/70 z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <!-- Neighborhood Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 text-amber-400 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-shield-halved text-brand-red"></i>
+                        <span>East Los Angeles' Trusted Independent Shop</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-none tracking-tight">
+                        Reliable Auto Repair.<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-brand-red to-amber-500">
+                            Honest Service.
+                        </span><br>
+                        Done Right.
+                    </h1>
+
+                    <p class="text-slate-300 text-lg sm:text-xl font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Your trusted 5-star <strong class="text-white font-semibold">Mecánico General</strong> & auto mechanic in East Los Angeles. Quality diagnostics, brake repair, A/C installation, water leak fixes, exhaust work, and general maintenance at affordable rates.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="tel:3237801262" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-red to-red-700 hover:from-red-600 hover:to-red-800 text-white font-extrabold text-base tracking-wide shadow-xl shadow-red-900/40 hover:shadow-red-900/70 transition-all flex items-center justify-center gap-3 transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-phone-volume text-lg"></i>
+                            <span>Call (323) 780-1262</span>
+                        </a>
+                        <button onclick="openModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-brand-red text-white font-bold text-base transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-clipboard-list text-brand-red"></i>
+                            <span>Get a Repair Estimate</span>
+                        </button>
+                    </div>
+
+                    <!-- Trust Pillars Grid -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                        <div class="flex items-center gap-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+                            <div class="w-9 h-9 rounded-md bg-brand-red/20 text-brand-red flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-100">Experienced Mechanics</h4>
+                                <p class="text-xs text-slate-400">Skilled diagnosis & care</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+                            <div class="w-9 h-9 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-tag"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-100">Fair & Transparent</h4>
+                                <p class="text-xs text-slate-400">No hidden surprises</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+                            <div class="w-9 h-9 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-100">Honest Guidance</h4>
+                                <p class="text-xs text-slate-400">Only repairs you need</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Card/Visual Box -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-2xl relative overflow-hidden group">
+                        
+                        <div class="absolute -top-12 -right-12 w-40 h-40 bg-brand-red/10 rounded-full blur-2xl"></div>
+
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                            <div>
+                                <span class="text-xs text-brand-red font-bold uppercase tracking-widest">Mecánico General</span>
+                                <h3 class="text-xl font-bold text-white">TNT Auto Repair Shop</h3>
+                            </div>
+                            <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 rounded text-xs font-semibold flex items-center gap-1 border border-amber-500/20">
+                                <i class="fa-solid fa-star"></i> Top Rated
+                            </span>
+                        </div>
+
+                        <!-- Highlights List -->
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-red text-lg mt-0.5"></i>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-200">Full Mechanical Diagnostics & Repair</div>
+                                    <div class="text-xs text-slate-400">Advanced scanner diagnostics for check engine lights & performance problems.</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-red text-lg mt-0.5"></i>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-200">Brakes, Suspension & Steering</div>
+                                    <div class="text-xs text-slate-400">Brake pads, rotors, struts, shocks, wheel bearings, and steering components.</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-red text-lg mt-0.5"></i>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-200">Engine & Transmission Work</div>
+                                    <div class="text-xs text-slate-400">From minor mechanical fixes to major engine rebuilding and cooling systems.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Direct Contact Card Box -->
+                        <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-between gap-4">
+                            <div>
+                                <div class="text-xs text-slate-400">Location</div>
+                                <div class="text-sm font-bold text-slate-100">4739 Telegraph Rd</div>
+                                <div class="text-xs text-slate-300">East Los Angeles, CA 90022</div>
+                            </div>
+                            <a href="https://maps.google.com/?q=4739+Telegraph+Rd,+Los+Angeles,+CA+90022" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-xs font-semibold text-white transition flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fa-solid fa-directions text-brand-red"></i> Directions
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <!-- Ambient Floating Light Orbs -->
-        <div class="absolute top-1/4 left-10 w-72 h-72 bg-gold-500/10 rounded-full filter blur-3xl ambient-orb pointer-events-none"></div>
-        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-navy-700/30 rounded-full filter blur-3xl ambient-orb pointer-events-none" style="animation-delay: -4s;"></div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white border-b border-slate-200 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- About Left Visual -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80" alt="TNT Auto Repair Mechanic Workshop" class="w-full h-[440px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        
+                        <div class="absolute bottom-6 left-6 right-6 text-white p-4 rounded-xl bg-slate-900/90 backdrop-blur border border-slate-700">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-brand-red flex items-center justify-center text-xl font-black text-white shrink-0">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-base">Your Local Independent Shop</div>
+                                    <div class="text-xs text-slate-300">Serving East Los Angeles with Pride & Integrity</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Hero Content Container -->
-        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
+                    <!-- Decorative Badge Overlay -->
+                    <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-5 rounded-2xl shadow-xl hidden sm:block border border-slate-800">
+                        <div class="text-3xl font-black font-display text-brand-red">100%</div>
+                        <div class="text-xs font-semibold text-slate-300">Honest & Practical<br>Recommendations</div>
+                    </div>
+                </div>
+
+                <!-- About Right Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-1">About TNT Auto Repair / Mecánico General</span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                            Your Trusted Independent Neighborhood Mechanic in East LA
+                        </h2>
+                    </div>
+
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                        At <strong class="text-slate-900">TNT Auto Repair</strong>, we believe every driver in East Los Angeles deserves dependable, honest automotive care without dealership markups or unnecessary repair upsells.
+                    </p>
+
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Whether you need a quick oil change, complex engine diagnostics, brake replacements, or major engine repair, our experienced mechanics take the time to inspect your vehicle thoroughly, explain the issue in plain language (English or Spanish), and recommend practical, budget-friendly solutions.
+                    </p>
+
+                    <!-- Key Focus Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-slate-300 transition">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-comments text-brand-red text-lg"></i>
+                                <h4 class="font-bold text-slate-900 text-sm">Honest Communication</h4>
+                            </div>
+                            <p class="text-xs text-slate-600">We explain what needs immediate attention and what can wait, keeping you fully informed.</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-slate-300 transition">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-dollar-sign text-brand-red text-lg"></i>
+                                <h4 class="font-bold text-slate-900 text-sm">Fair & Transparent Pricing</h4>
+                            </div>
+                            <p class="text-xs text-slate-600">No hidden fees or unexpected charges. Straightforward estimates before work begins.</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-slate-300 transition">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-gears text-brand-red text-lg"></i>
+                                <h4 class="font-bold text-slate-900 text-sm">Experienced Workmanship</h4>
+                            </div>
+                            <p class="text-xs text-slate-600">Skilled hands and proper tools ensuring your repair is done safely and correctly.</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-slate-300 transition">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-heart text-brand-red text-lg"></i>
+                                <h4 class="font-bold text-slate-900 text-sm">Personalized Care</h4>
+                            </div>
+                            <p class="text-xs text-slate-600">Friendly local service where you talk directly to the mechanic taking care of your car.</p>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Line -->
+                    <div class="pt-4 flex items-center gap-4">
+                        <a href="#contact" class="px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition inline-flex items-center gap-2">
+                            <span>Visit Our Telegraph Rd Shop</span>
+                            <i class="fa-solid fa-arrow-right text-xs text-brand-red"></i>
+                        </a>
+                        <span class="text-xs text-slate-500 italic hidden sm:inline">Located near East LA College & Atlantic Blvd</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Eyebrow Tag -->
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 backdrop-blur-md mb-8 animate-fade-in">
-                <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
-                <span class="text-xs sm:text-sm font-semibold tracking-widest uppercase text-gold-400">
-                    KLASSEN LAW OFFICE &bull; EDMONTON, ALBERTA
-                </span>
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-2">Mecánico General • Complete Auto Repair</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    Professional Services & Vehicle Repair
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-3">
+                    From minor maintenance to major mechanical overhauls, our experienced mechanics get you back on the road safely.
+                </p>
             </div>
 
-            <!-- Main Headline -->
-            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tight mb-6 text-white text-shadow-lg">
-                Trusted Legal Guidance <br class="hidden sm:inline">
-                <span class="italic text-gold-400 font-serif font-normal">When It Matters Most</span>
-            </h1>
+            <div class="max-w-4xl mx-auto mb-10 space-y-4">
+                <!-- Search Box -->
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input type="text" id="serviceSearchInput" onkeyup="filterServices()" placeholder="Search services (e.g., carburetor, brakes, water leak, exhaust, battery, A/C...)" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-brand-red transition">
+                </div>
 
-            <!-- Supporting Text -->
-            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-200 leading-relaxed font-light mb-10">
-                Experienced legal representation for individuals and families across a range of legal matters, with a professional and client-focused approach.
-            </p>
+                <!-- Category Pills -->
+                <div class="flex items-center justify-center gap-2 flex-wrap text-xs font-semibold">
+                    <button onclick="setServiceCategory('all')" class="category-btn active border px-3.5 py-1.5 rounded-full bg-brand-red text-white border-brand-red transition" data-cat="all">All Services</button>
+                    <button onclick="setServiceCategory('engine')" class="category-btn border px-3.5 py-1.5 rounded-full bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500 transition" data-cat="engine">Engine & Diagnostics</button>
+                    <button onclick="setServiceCategory('brakes')" class="category-btn border px-3.5 py-1.5 rounded-full bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500 transition" data-cat="brakes">Brakes & Suspension</button>
+                    <button onclick="setServiceCategory('climate')" class="category-btn border px-3.5 py-1.5 rounded-full bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500 transition" data-cat="climate">A/C & Electrical</button>
+                    <button onclick="setServiceCategory('body')" class="category-btn border px-3.5 py-1.5 rounded-full bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500 transition" data-cat="body">Body, Trim & Exhaust</button>
+                    <button onclick="setServiceCategory('maint')" class="category-btn border px-3.5 py-1.5 rounded-full bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500 transition" data-cat="maint">Maintenance & Filters</button>
+                </div>
+            </div>
 
-            <!-- Hero Action Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                <button onclick="openConsultationModal()" class="w-full sm:w-auto px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm tracking-widest uppercase rounded shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
-                    <span>SCHEDULE A CONSULTATION</span>
-                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                </button>
-                <a href="tel:7804138077" class="w-full sm:w-auto px-8 py-4 bg-transparent hover:bg-white/10 text-white border border-white/30 hover:border-gold-500 font-semibold text-sm tracking-widest uppercase rounded backdrop-blur-sm transition-all flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-phone text-gold-400"></i>
-                    <span>CALL (780) 413-8077</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
+                
+                <!-- Service 1: Diagnostics & Tuning -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="engine" data-keywords="vehicle engine diagnostic tuning engine repair carburetor cleaning mechanics">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Engine Diagnostic & Tuning</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Check engine light troubleshooting, live sensor readings, engine tuning, performance optimization, and classic carburetor cleaning.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Computer Diagnostic Scan</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Carburetor Cleaning & Tuning</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Misfire & Sensor Replacement</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Brakes -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="brakes" data-keywords="brakes vehicle brake repair vehicle brake replacement pads rotors calipers ABS">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Brake Repair & Replacement</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Complete brake inspections, ceramic/metallic pad replacement, rotor resurfacing/replacement, and brake line bleeding.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Front & Rear Brake Service</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Rotor Replacement & Resurfacing</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Fluid Flush & Caliper Repair</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Oil Change & Filters -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="maint" data-keywords="oil change air and cabin filter replacement maintenance vehicle maintenance synthetic">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-oil-can"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Oil Change & Filter Service</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Full synthetic and synthetic blend motor oil changes paired with engine air filter and cabin air filter replacements for clean performance.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> High-Mileage & Synthetic Oil</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Air & Cabin Filter Replacement</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Free Multi-Point Inspection</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Steering & Suspension -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="brakes" data-keywords="steering and suspension repair steering and suspension replacement shocks struts tie rods rack pinion">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Steering & Suspension</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Shock and strut replacement, control arms, ball joints, tie rod ends, power steering pumps, and rack & pinion repairs.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Suspension Strut & Shock Replacement</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Tie Rods, Ball Joints & Bushings</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Steering Noise & Clunk Diagnosis</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5: A/C Installation & Repair -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="climate" data-keywords="air conditioning a/c installation and repair freon compressor heater core climate">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">A/C Installation & Repair</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Complete auto air conditioning recharge, A/C compressor replacement, line leak testing, climate controls, and heater repair.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Freon R134a / R1234yf Recharge</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> A/C Compressor & Condenser Install</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Heater Core & Blower Motor Fix</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6: Battery & Electrical -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="climate" data-keywords="battery vehicle battery replacement electrical electrical repair alternator starter wiring">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-car-battery"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Battery & Electrical Repair</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Vehicle battery testing & replacement, alternator installation, starter repair, electrical short troubleshooting, and wiring.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Vehicle Battery Replacement</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Alternator & Starter Motors</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Electrical Short & Fuse Diagnostics</li>
+                    </ul>
+                </div>
+
+                <!-- Service 7: Exhaust System -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="body" data-keywords="exhaust vehicle exhaust system repair vehicle exhaust system replacement muffler catalytic converter flex pipe">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Exhaust System Repair</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Vehicle exhaust system repair and full replacement, muffler fixing, catalytic converter service, manifold leak sealing, and flex pipes.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Muffler & Pipe Replacement</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Catalytic Converter & O2 Sensors</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Exhaust Noise & Leak Sealing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 8: Body & Trim Repair -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="body" data-keywords="body & trim vehicle body and trim repair vehicle body and trim replacement painting molding door handle bumper">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-paint-roller"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Body & Trim Repair</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Minor vehicle body and trim repair, molding/clip replacement, door handle & window mechanism fixes, touch-up painting, and trim align.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Exterior Trim & Molding Repair</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Bumper, Door & Mirror Assemblies</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Minor Body Touch-up & Painting</li>
+                    </ul>
+                </div>
+
+                <!-- Service 9: Water Leak Repair -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="body" data-keywords="vehicle water leak repair sunroof door seal windshield weatherstrip trunk damp cabin leak">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-droplet-slash"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Vehicle Water Leak Repair</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Locating and sealing cabin water leaks, unblocking sunroof drain tubes, replacing damaged door seals, weatherstripping, and trunk leaks.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Sunroof Drain Clearing & Sealing</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Door & Windshield Weatherstripping</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Interior Dampness & Mold Prevention</li>
+                    </ul>
+                </div>
+
+                <!-- Service 10: Auto Detailing -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="maint" data-keywords="auto detailing interior cleaning engine bay wash wax polish shine clean">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-spray-can-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Auto Detailing & Clean</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Interior and exterior auto detailing, engine bay degreasing and wash, headlight restoration, and protective paint sealant options.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Engine Bay Wash & Degrease</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Headlight Clarity Restoration</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Interior Vacuum & Surface Clean</li>
+                    </ul>
+                </div>
+
+                <!-- Service 11: General Repairs & Maintenance -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="maint" data-keywords="general repairs & maintenance vehicle maintenance low cost mechanic mecanico general 30k 60k 90k belts hoses">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">General Repairs & Care</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Scheduled 30k/60k/90k mileage servicing, serpentine belts, water pumps, thermostat, radiator replacement, and general tune-ups.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Factory Scheduled Maintenance</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Belts, Hoses & Radiator Replacements</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Complete Multi-Point Inspections</li>
+                    </ul>
+                </div>
+
+                <!-- Service 12: Engine Rebuilding & Major Fixes -->
+                <div class="service-card bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl card-hover flex flex-col justify-between" data-category="engine" data-keywords="engine repair engine rebuilding head gasket timing belt overhaul overhaul low cost mechanic">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-engine"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Engine Repair & Overhauls</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Timing belt and chain replacement, cylinder head gaskets, oil pan leak seals, engine replacement, and major mechanical rebuilding.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-1.5 pt-3 border-t border-slate-700/60">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Head Gasket & Valve Seals</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Timing Belt & Water Pump Kits</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Engine Swaps & Rebuilding</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- SEO Tags Bar -->
+            <div class="mt-10 pt-6 border-t border-slate-800 flex flex-wrap items-center justify-center gap-2 text-[11px] text-slate-400">
+                <span class="font-bold text-slate-300 mr-2">Popular Searches:</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700">Auto Mechanic Near Me</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700">Mecánico General East LA</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700">Low Cost Mechanic</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700">5 Stars Mechanic</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700">Vehicle Brake Replacement</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700">A/C Installation & Repair</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700">Exhaust System Repair</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700">Water Leak Repair</span>
+            </div>
+
+            <!-- CTA Callout Bar -->
+            <div class="mt-10 p-8 rounded-2xl bg-gradient-to-r from-red-950 via-slate-800 to-slate-900 border border-brand-red/40 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+                <div>
+                    <h4 class="text-2xl font-bold text-white mb-1">Need a Quick Repair or Estimate?</h4>
+                    <p class="text-slate-300 text-sm">Talk directly with our lead mechanic at (323) 780-1262 or visit our Telegraph Rd location.</p>
+                </div>
+                <a href="tel:3237801262" class="px-7 py-3.5 rounded-xl bg-brand-red hover:bg-red-700 text-white font-extrabold text-sm transition shadow-lg whitespace-nowrap flex items-center gap-2">
+                    <span>Talk to Our Mechanics</span>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
 
-            <!-- Key Quick Stats Bar -->
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-4 pt-8 border-t border-white/10 max-w-4xl mx-auto text-left">
-                <div class="p-3 border-l-2 border-gold-500 bg-white/5 backdrop-blur-sm rounded-r">
-                    <div class="text-xs text-gold-400 uppercase tracking-widest font-semibold">Location</div>
-                    <div class="text-sm sm:text-base font-semibold text-white">Downtown Edmonton</div>
-                </div>
-                <div class="p-3 border-l-2 border-gold-500 bg-white/5 backdrop-blur-sm rounded-r">
-                    <div class="text-xs text-gold-400 uppercase tracking-widest font-semibold">Focus</div>
-                    <div class="text-sm sm:text-base font-semibold text-white">General Practice</div>
-                </div>
-                <div class="col-span-2 md:col-span-1 p-3 border-l-2 border-gold-500 bg-white/5 backdrop-blur-sm rounded-r">
-                    <div class="text-xs text-gold-400 uppercase tracking-widest font-semibold">Approach</div>
-                    <div class="text-sm sm:text-base font-semibold text-white">Client-Centered Care</div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Scroll Down Indicator -->
-        <a href="#about" aria-label="Scroll to About section" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-gray-400 hover:text-gold-400 transition-colors group">
-            <span class="text-xs uppercase tracking-widest mb-2 font-medium">Scroll</span>
-            <div class="w-6 h-10 border-2 border-white/30 group-hover:border-gold-500 rounded-full flex justify-center p-1">
-                <div class="w-1 h-2 bg-gold-500 rounded-full animate-bounce"></div>
-            </div>
-        </a>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 bg-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                
-                <!-- Left Image Box with Framed Accent -->
-                <div class="lg:col-span-5 scroll-reveal">
-                    <div class="relative">
-                        <!-- Background Decorative Frame -->
-                        <div class="absolute -inset-3 rounded-lg border-2 border-gold-500/40 transform translate-x-3 translate-y-3 pointer-events-none"></div>
-                        
-                        <!-- Image Container -->
-                        <div class="relative rounded-lg overflow-hidden shadow-2xl bg-navy-900">
-                            <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1000" 
-                                 alt="Klassen Law Office Downtown Edmonton Office" 
-                                 class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
-                                 onerror="this.src='https://placehold.co/800x1000/0B132B/C5A059?text=Klassen+Law+Office'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent"></div>
-                            
-                            <!-- Embedded Badge -->
-                            <div class="absolute bottom-6 left-6 right-6 p-4 bg-navy-900/90 backdrop-blur-md border-l-4 border-gold-500 text-white rounded-r">
-                                <p class="text-xs text-gold-400 font-semibold tracking-widest uppercase">Edmonton, Alberta</p>
-                                <p class="font-serif text-lg font-bold">Serving Edmonton & Surrounding Communities</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Narrative Content -->
-                <div class="lg:col-span-7 space-y-6 scroll-reveal">
-                    <div class="inline-block">
-                        <span class="text-xs uppercase font-bold tracking-widest text-gold-600 bg-gold-50 px-3 py-1 rounded border border-gold-500/20">
-                            ABOUT KLASSEN LAW OFFICE
-                        </span>
-                    </div>
-
-                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-navy-900 leading-tight">
-                        Practical Legal Representation. <br>
-                        <span class="text-gold-600 font-normal italic">Personal Attention.</span>
-                    </h2>
-
-                    <p class="text-charcoal-600 text-base sm:text-lg leading-relaxed">
-                        Klassen Law Office is a downtown Edmonton law office providing legal services with a practical, professional and client-focused approach. The firm represents clients across a range of legal matters and works to provide clear guidance and effective representation when it matters most.
-                    </p>
-
-                    <p class="text-charcoal-600 text-sm sm:text-base leading-relaxed">
-                        Navigating legal complexities requires a counsel who listens attentively, analyzes every detail, and formulates pragmatic strategies tailored specifically to your unique goals and priorities.
-                    </p>
-
-                    <!-- Feature Highlight Blocks -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-                        <div class="p-4 bg-charcoal-50 rounded-lg border border-gray-100 hover:border-gold-500/40 transition-colors">
-                            <div class="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center text-gold-600 mb-3">
-                                <i class="fa-solid fa-city text-sm"></i>
-                            </div>
-                            <h3 class="font-bold text-navy-900 text-sm uppercase tracking-wide">EDMONTON</h3>
-                            <p class="text-xs text-charcoal-600 mt-1">Downtown Edmonton location</p>
-                        </div>
-
-                        <div class="p-4 bg-charcoal-50 rounded-lg border border-gray-100 hover:border-gold-500/40 transition-colors">
-                            <div class="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center text-gold-600 mb-3">
-                                <i class="fa-solid fa-gavel text-sm"></i>
-                            </div>
-                            <h3 class="font-bold text-navy-900 text-sm uppercase tracking-wide">GENERAL PRACTICE</h3>
-                            <p class="text-xs text-charcoal-600 mt-1">Representation across multiple areas</p>
-                        </div>
-
-                        <div class="p-4 bg-charcoal-50 rounded-lg border border-gray-100 hover:border-gold-500/40 transition-colors">
-                            <div class="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center text-gold-600 mb-3">
-                                <i class="fa-solid fa-user-shield text-sm"></i>
-                            </div>
-                            <h3 class="font-bold text-navy-900 text-sm uppercase tracking-wide">CLIENT FOCUSED</h3>
-                            <p class="text-xs text-charcoal-600 mt-1">Professional & personalized service</p>
-                        </div>
-                    </div>
-
-                    <!-- CTA Button -->
-                    <div class="pt-4 flex items-center gap-4">
-                        <a href="#services" class="inline-flex items-center gap-2 px-6 py-3 bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-widest rounded transition-all group">
-                            <span>LEARN MORE ABOUT SERVICES</span>
-                            <i class="fa-solid fa-arrow-right text-gold-400 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="py-24 bg-charcoal-50 border-y border-gray-200 relative">
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-slate-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
-                <span class="text-xs uppercase font-bold tracking-widest text-gold-600 bg-gold-100/80 px-3 py-1 rounded border border-gold-500/20">
-                    OUR LEGAL SERVICES
-                </span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-navy-900 mt-3 mb-4">
-                    Experienced Representation Across Multiple Legal Matters
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-2">Why Local Drivers Trust Us</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    The TNT Auto Repair Difference
                 </h2>
-                <p class="text-charcoal-600 text-base sm:text-lg">
-                    Comprehensive legal counsel tailored to protecting your rights, interests, and peace of mind.
+                <p class="text-slate-600 text-sm sm:text-base mt-3">
+                    We built our reputation in East Los Angeles on honesty, craftsmanship, and practical customer care.
                 </p>
             </div>
 
-            <!-- Services 8-Card Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- 1. Criminal Law -->
-                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group scroll-reveal">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900/5 group-hover:bg-navy-900 text-navy-900 group-hover:text-gold-400 flex items-center justify-center text-xl mb-5 transition-colors">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600 transition-colors">
-                            Criminal Law
-                        </h3>
-                        <p class="text-charcoal-600 text-sm leading-relaxed mb-6">
-                            Professional representation and guidance for clients facing criminal allegations and charges.
-                        </p>
-                    </div>
-                    <button onclick="openServiceModal('criminal-law')" class="text-xs font-bold text-gold-600 uppercase tracking-wider flex items-center gap-2 hover:text-navy-900 transition-colors group/btn">
-                        <span>LEARN MORE</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
-                    </button>
-                </div>
-
-                <!-- 2. Impaired Driving -->
-                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group scroll-reveal">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900/5 group-hover:bg-navy-900 text-navy-900 group-hover:text-gold-400 flex items-center justify-center text-xl mb-5 transition-colors">
-                            <i class="fa-solid fa-car-burst"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600 transition-colors">
-                            Impaired Driving
-                        </h3>
-                        <p class="text-charcoal-600 text-sm leading-relaxed mb-6">
-                            Legal assistance and representation for impaired driving charges and license suspensions.
-                        </p>
-                    </div>
-                    <button onclick="openServiceModal('impaired-driving')" class="text-xs font-bold text-gold-600 uppercase tracking-wider flex items-center gap-2 hover:text-navy-900 transition-colors group/btn">
-                        <span>LEARN MORE</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
-                    </button>
-                </div>
-
-                <!-- 3. Bail Representation -->
-                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group scroll-reveal">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900/5 group-hover:bg-navy-900 text-navy-900 group-hover:text-gold-400 flex items-center justify-center text-xl mb-5 transition-colors">
-                            <i class="fa-solid fa-key"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600 transition-colors">
-                            Bail Representation
-                        </h3>
-                        <p class="text-charcoal-600 text-sm leading-relaxed mb-6">
-                            Professional representation and guidance during urgent judicial interim release (bail) proceedings.
-                        </p>
-                    </div>
-                    <button onclick="openServiceModal('bail')" class="text-xs font-bold text-gold-600 uppercase tracking-wider flex items-center gap-2 hover:text-navy-900 transition-colors group/btn">
-                        <span>LEARN MORE</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
-                    </button>
-                </div>
-
-                <!-- 4. Narcotics & Drug Offences -->
-                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group scroll-reveal">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900/5 group-hover:bg-navy-900 text-navy-900 group-hover:text-gold-400 flex items-center justify-center text-xl mb-5 transition-colors">
-                            <i class="fa-solid fa-capsules"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600 transition-colors">
-                            Narcotics & Drug Offences
-                        </h3>
-                        <p class="text-charcoal-600 text-sm leading-relaxed mb-6">
-                            Strategic legal representation for possession, trafficking, and drug-related offences.
-                        </p>
-                    </div>
-                    <button onclick="openServiceModal('narcotics')" class="text-xs font-bold text-gold-600 uppercase tracking-wider flex items-center gap-2 hover:text-navy-900 transition-colors group/btn">
-                        <span>LEARN MORE</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
-                    </button>
-                </div>
-
-                <!-- 5. Family Law -->
-                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group scroll-reveal">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900/5 group-hover:bg-navy-900 text-navy-900 group-hover:text-gold-400 flex items-center justify-center text-xl mb-5 transition-colors">
-                            <i class="fa-solid fa-people-roof"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600 transition-colors">
-                            Family Law
-                        </h3>
-                        <p class="text-charcoal-600 text-sm leading-relaxed mb-6">
-                            Compassionate guidance and representation regarding complex family-related legal matters.
-                        </p>
-                    </div>
-                    <button onclick="openServiceModal('family-law')" class="text-xs font-bold text-gold-600 uppercase tracking-wider flex items-center gap-2 hover:text-navy-900 transition-colors group/btn">
-                        <span>LEARN MORE</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
-                    </button>
-                </div>
-
-                <!-- 6. Divorce & Separation -->
-                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group scroll-reveal">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900/5 group-hover:bg-navy-900 text-navy-900 group-hover:text-gold-400 flex items-center justify-center text-xl mb-5 transition-colors">
-                            <i class="fa-solid fa-file-contract"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600 transition-colors">
-                            Divorce & Separation
-                        </h3>
-                        <p class="text-charcoal-600 text-sm leading-relaxed mb-6">
-                            Professional legal assistance navigating contested or uncontested divorce and separation agreements.
-                        </p>
-                    </div>
-                    <button onclick="openServiceModal('divorce')" class="text-xs font-bold text-gold-600 uppercase tracking-wider flex items-center gap-2 hover:text-navy-900 transition-colors group/btn">
-                        <span>LEARN MORE</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
-                    </button>
-                </div>
-
-                <!-- 7. Child Custody & Support -->
-                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group scroll-reveal">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900/5 group-hover:bg-navy-900 text-navy-900 group-hover:text-gold-400 flex items-center justify-center text-xl mb-5 transition-colors">
-                            <i class="fa-solid fa-child-reaching"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600 transition-colors">
-                            Child Custody & Support
-                        </h3>
-                        <p class="text-charcoal-600 text-sm leading-relaxed mb-6">
-                            Focused legal representation protecting parental rights and the best interests of your children.
-                        </p>
-                    </div>
-                    <button onclick="openServiceModal('child-custody')" class="text-xs font-bold text-gold-600 uppercase tracking-wider flex items-center gap-2 hover:text-navy-900 transition-colors group/btn">
-                        <span>LEARN MORE</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
-                    </button>
-                </div>
-
-                <!-- 8. Spousal Support -->
-                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group scroll-reveal">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900/5 group-hover:bg-navy-900 text-navy-900 group-hover:text-gold-400 flex items-center justify-center text-xl mb-5 transition-colors">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600 transition-colors">
-                            Spousal Support
-                        </h3>
-                        <p class="text-charcoal-600 text-sm leading-relaxed mb-6">
-                            Clear legal guidance regarding entitlement, calculation, and enforcement of spousal maintenance.
-                        </p>
-                    </div>
-                    <button onclick="openServiceModal('spousal-support')" class="text-xs font-bold text-gold-600 uppercase tracking-wider flex items-center gap-2 hover:text-navy-900 transition-colors group/btn">
-                        <span>LEARN MORE</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
-                    </button>
-                </div>
-
-            </div>
-
-            <!-- Services Callout Box -->
-            <div class="mt-16 bg-navy-900 text-white rounded-xl p-8 sm:p-10 shadow-2xl relative overflow-hidden border border-gold-500/30 flex flex-col lg:flex-row items-center justify-between gap-6 scroll-reveal">
-                <div class="relative z-10">
-                    <span class="text-xs uppercase font-bold tracking-widest text-gold-400">NEED LEGAL ASSISTANCE?</span>
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold mt-1 text-white">Let's discuss your situation confidentially.</h3>
-                    <p class="text-gray-300 text-sm mt-1">Get initial clarity on your legal options in Edmonton.</p>
-                </div>
-                <div class="relative z-10 w-full lg:w-auto">
-                    <button onclick="openConsultationModal()" class="w-full lg:w-auto px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm uppercase tracking-widest rounded shadow-lg transition-all whitespace-nowrap">
-                        BOOK A CONSULTATION
-                    </button>
-                </div>
-                <!-- Decorative background elements -->
-                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-gold-500/10 rounded-full filter blur-2xl pointer-events-none"></div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- WHY CHOOSE US SECTION -->
-    <section id="why-choose-us" class="py-24 bg-navy-900 text-white relative overflow-hidden">
-        
-        <!-- Subtle Background Graphic Elements -->
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-navy-800 to-transparent opacity-50 pointer-events-none"></div>
-        <div class="absolute -left-20 top-1/2 transform -translate-y-1/2 w-80 h-80 bg-gold-500/5 rounded-full filter blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            
-            <!-- Section Title -->
-            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
-                <span class="text-xs uppercase font-bold tracking-widest text-gold-400 border border-gold-500/30 px-3 py-1 rounded bg-gold-500/10">
-                    WHY CHOOSE KLASSEN LAW OFFICE
-                </span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-4 text-white">
-                    Professional Guidance. Clear Communication. Dedicated Representation.
-                </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mt-4"></div>
-            </div>
-
-            <!-- 4 Visual Feature Blocks -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- 01 -->
-                <div class="glass-card p-8 rounded-lg relative hover:border-gold-500/50 transition-all group scroll-reveal">
-                    <div class="flex items-start justify-between mb-6">
-                        <span class="font-serif text-5xl font-bold text-gold-500/40 group-hover:text-gold-400 transition-colors">01</span>
-                        <div class="w-10 h-10 rounded bg-gold-500/10 flex items-center justify-center text-gold-400">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-white mb-3 group-hover:text-gold-400 transition-colors">
-                        Experienced Legal Guidance
-                    </h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Provide knowledgeable representation across a range of legal matters, ensuring every decision is grounded in deep legal precedent and practical insight.
-                    </p>
-                </div>
-
-                <!-- 02 -->
-                <div class="glass-card p-8 rounded-lg relative hover:border-gold-500/50 transition-all group scroll-reveal">
-                    <div class="flex items-start justify-between mb-6">
-                        <span class="font-serif text-5xl font-bold text-gold-500/40 group-hover:text-gold-400 transition-colors">02</span>
-                        <div class="w-10 h-10 rounded bg-gold-500/10 flex items-center justify-center text-gold-400">
-                            <i class="fa-solid fa-handshake-angle"></i>
-                        </div>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-white mb-3 group-hover:text-gold-400 transition-colors">
-                        Client-Focused Approach
-                    </h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Focus on understanding each client's specific circumstances, concerns, and goals to provide personalized and responsive counsel throughout.
-                    </p>
-                </div>
-
-                <!-- 03 -->
-                <div class="glass-card p-8 rounded-lg relative hover:border-gold-500/50 transition-all group scroll-reveal">
-                    <div class="flex items-start justify-between mb-6">
-                        <span class="font-serif text-5xl font-bold text-gold-500/40 group-hover:text-gold-400 transition-colors">03</span>
-                        <div class="w-10 h-10 rounded bg-gold-500/10 flex items-center justify-center text-gold-400">
-                            <i class="fa-solid fa-scale-balanced"></i>
-                        </div>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-white mb-3 group-hover:text-gold-400 transition-colors">
-                        Professional Representation
-                    </h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Approach every legal matter with thorough preparation, strict ethical standards, professionalism, and unwavering attention to detail.
-                    </p>
-                </div>
-
-                <!-- 04 -->
-                <div class="glass-card p-8 rounded-lg relative hover:border-gold-500/50 transition-all group scroll-reveal">
-                    <div class="flex items-start justify-between mb-6">
-                        <span class="font-serif text-5xl font-bold text-gold-500/40 group-hover:text-gold-400 transition-colors">04</span>
-                        <div class="w-10 h-10 rounded bg-gold-500/10 flex items-center justify-center text-gold-400">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-white mb-3 group-hover:text-gold-400 transition-colors">
-                        Convenient Edmonton Location
-                    </h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Located in downtown Edmonton for accessible, confidential legal consultations for residents across Edmonton and surrounding regions.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Heading -->
-            <div class="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
-                <span class="text-xs uppercase font-bold tracking-widest text-gold-600 bg-gold-100/80 px-3 py-1 rounded border border-gold-500/20">
-                    WHAT CLIENTS SAY
-                </span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-navy-900 mt-3 mb-4">
-                    Client Feedback & Perspectives
-                </h2>
-                <p class="text-charcoal-600 text-sm sm:text-base">
-                    Read feedback reflecting our commitment to professional legal service and clear communication.
-                </p>
-            </div>
-
-            <!-- Testimonials Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Advantages Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Card 1 -->
-                <div class="bg-charcoal-50 p-8 rounded-xl border border-gray-200/80 hover:border-gold-500/40 shadow-sm hover:shadow-md transition-all flex flex-col justify-between scroll-reveal">
-                    <div>
-                        <!-- Stars -->
-                        <div class="flex text-gold-500 mb-4 text-sm">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <i class="fa-solid fa-quote-left text-3xl text-gold-500/20 block mb-3"></i>
-                        <p class="text-charcoal-800 text-base italic leading-relaxed mb-6 font-serif">
-                            "Professional, knowledgeable and responsive throughout the legal process. I appreciated having someone who took the time to explain the situation clearly."
-                        </p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <div class="pt-4 border-t border-gray-200/60 flex items-center justify-between">
-                        <div>
-                            <span class="text-xs font-bold uppercase text-navy-900 tracking-wider block">Verified Legal Client</span>
-                            <span class="text-xs text-gray-500">Edmonton Matter</span>
-                        </div>
-                        <i class="fa-solid fa-check-circle text-gold-600 text-sm"></i>
-                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Honest Recommendations</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        We provide clear, honest explanations before any work begins. You will always know what is necessary for safety versus optional maintenance.
+                    </p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-charcoal-50 p-8 rounded-xl border border-gray-200/80 hover:border-gold-500/40 shadow-sm hover:shadow-md transition-all flex flex-col justify-between scroll-reveal">
-                    <div>
-                        <!-- Stars -->
-                        <div class="flex text-gold-500 mb-4 text-sm">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <i class="fa-solid fa-quote-left text-3xl text-gold-500/20 block mb-3"></i>
-                        <p class="text-charcoal-800 text-base italic leading-relaxed mb-6 font-serif">
-                            "Clear communication and professional representation from start to finish. Having strategic advice during a difficult legal situation made all the difference."
-                        </p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-receipt"></i>
                     </div>
-                    <div class="pt-4 border-t border-gray-200/60 flex items-center justify-between">
-                        <div>
-                            <span class="text-xs font-bold uppercase text-navy-900 tracking-wider block">Verified Legal Client</span>
-                            <span class="text-xs text-gray-500">General Practice Client</span>
-                        </div>
-                        <i class="fa-solid fa-check-circle text-gold-600 text-sm"></i>
-                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Fair & Transparent Pricing</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Straightforward estimates with practical repair options. We respect your budget and never add surprise fees to your final bill.
+                    </p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-charcoal-50 p-8 rounded-xl border border-gray-200/80 hover:border-gold-500/40 shadow-sm hover:shadow-md transition-all flex flex-col justify-between scroll-reveal">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Experienced Mechanics</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Knowledgeable technicians focused on quality mechanical workmanship. We use modern diagnostic scanners and trusted parts.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Personalized Service</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Friendly neighborhood shop experience without the corporate dealership hassle. Speak directly with the mechanic fixing your vehicle.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Reliable Repairs</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Dependable solutions to tough mechanical problems. We test our work thoroughly to make sure your car drives away safe and smooth.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-slate-900/10 text-slate-900 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Local East LA Service</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        A convenient neighborhood repair shop located right on Telegraph Rd. Proudly serving our local Spanish and English speaking community.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-2">Customer Feedback</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    What Drivers Say About TNT Auto Repair
+                </h2>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <div class="flex text-amber-400 text-lg">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-sm font-bold text-slate-800">5.0 Star Local Reputation</span>
+                </div>
+            </div>
+
+            <!-- Testimonial Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                     <div>
-                        <!-- Stars -->
-                        <div class="flex text-gold-500 mb-4 text-sm">
+                        <div class="flex text-amber-400 text-sm mb-3">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </div>
-                        <i class="fa-solid fa-quote-left text-3xl text-gold-500/20 block mb-3"></i>
-                        <p class="text-charcoal-800 text-base italic leading-relaxed mb-6 font-serif">
-                            "An experienced and approachable legal professional who takes client concerns seriously and works diligently to protect your legal interests."
+                        <p class="text-slate-700 text-sm italic mb-6">
+                            "TNT Auto Repair is hands down the most honest mechanic shop in East LA. I thought I needed an expensive transmission repair, but they inspected it and found it was just a loose sensor. Saved me hundreds!"
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-gray-200/60 flex items-center justify-between">
-                        <div>
-                            <span class="text-xs font-bold uppercase text-navy-900 tracking-wider block">Verified Legal Client</span>
-                            <span class="text-xs text-gray-500">Family & Legal Representation</span>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-sm">
+                            M.R.
                         </div>
-                        <i class="fa-solid fa-check-circle text-gold-600 text-sm"></i>
+                        <div>
+                            <div class="text-sm font-bold text-slate-900">Verified Customer</div>
+                            <div class="text-xs text-slate-500">Brake & Diagnostic Service</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic mb-6">
+                            "Excelente servicio y muy honestos. Me explicaron en español todo lo que necesitaba mi carro antes de empezar el trabajo. Precios muy razonables y entrega rápida."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center text-sm">
+                            J.G.
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-slate-900">Verified Customer</div>
+                            <div class="text-xs text-slate-500">Engine & Suspension Repair</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic mb-6">
+                            "Great neighborhood mechanic on Telegraph Rd. They fixed my A/C right before summer and did a complete brake job. Fast turnaround and my car runs like new again."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-sm">
+                            A.L.
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-slate-900">Verified Customer</div>
+                            <div class="text-xs text-slate-500">A/C & Maintenance</div>
+                        </div>
                     </div>
                 </div>
 
@@ -761,509 +885,501 @@
         </div>
     </section>
 
-    <!-- CTA CONVERSION SECTION -->
-    <section class="py-20 bg-navy-900 text-white relative overflow-hidden">
-        <!-- Background Overlay Image -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" 
-                 alt="Courthouse Edmonton Architecture" 
-                 class="w-full h-full object-cover opacity-15"
-                 onerror="this.src='https://placehold.co/1920x600/0B132B/C5A059?text=Legal+Banner'">
-            <div class="absolute inset-0 bg-gradient-to-r from-navy-900 via-navy-900/90 to-navy-900"></div>
-        </div>
-
-        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-reveal">
-            <!-- Animated Gold Divider -->
-            <div class="w-16 h-1 bg-gold-500 mx-auto mb-6"></div>
-            
-            <h2 class="font-serif text-3xl sm:text-5xl font-bold mb-6 text-white">
-                Have a Legal Matter That Needs Attention?
+    <!-- Call to Action Banner -->
+    <section class="py-16 bg-gradient-to-r from-slate-950 via-slate-900 to-red-950 text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="font-display text-3xl sm:text-5xl font-black mb-4 tracking-tight">
+                Your Car Needs Attention. We’re Ready to Help.
             </h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10 font-light">
-                Speak with Klassen Law Office to discuss your legal situation and determine the appropriate next step.
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                From routine maintenance to major mechanical repairs, our team is here to help you understand the problem and find the right solution.
             </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                <a href="tel:7804138077" class="w-full sm:w-auto px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm tracking-widest uppercase rounded shadow-xl transition-all flex items-center justify-center gap-2">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tel:3237801262" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-red hover:bg-red-700 text-white font-black text-base shadow-xl shadow-red-900/50 transition flex items-center justify-center gap-3 transform hover:-translate-y-0.5">
                     <i class="fa-solid fa-phone"></i>
-                    <span>CALL (780) 413-8077</span>
+                    <span>Call TNT Auto Repair: (323) 780-1262</span>
                 </a>
-                <button onclick="openConsultationModal()" class="w-full sm:w-auto px-8 py-4 bg-transparent hover:bg-white/10 text-white border border-white/40 hover:border-gold-500 font-bold text-sm tracking-widest uppercase rounded transition-all">
-                    REQUEST A CONSULTATION
+                <button onclick="openModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-bold text-base transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-check text-brand-red"></i>
+                    <span>Request an Estimate</span>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-24 bg-charcoal-50 relative">
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-20 bg-slate-100 text-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            <div class="grid lg:grid-cols-12 gap-12">
                 
-                <!-- Left Info Panel -->
-                <div class="lg:col-span-5 space-y-8 scroll-reveal">
+                <!-- Contact Info & Hours Column -->
+                <div class="lg:col-span-5 space-y-8">
                     <div>
-                        <span class="text-xs uppercase font-bold tracking-widest text-gold-600 bg-gold-100 px-3 py-1 rounded border border-gold-500/20">
-                            GET IN TOUCH
-                        </span>
-                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mt-3 mb-4">
-                            CONTACT KLASSEN LAW OFFICE
+                        <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-1">Get In Touch</span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                            Visit TNT Auto Repair / Mecánico General
                         </h2>
-                        <p class="text-charcoal-600 text-sm sm:text-base leading-relaxed">
-                            Reach out to schedule a consultation or make inquiries about legal services in Edmonton, Alberta.
+                        <p class="text-slate-600 text-sm mt-2">
+                            Stop by our shop or call us directly during business hours. We're ready to assist you!
                         </p>
                     </div>
 
-                    <!-- Contact Details List -->
-                    <div class="space-y-6">
-                        
-                        <!-- Phone -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-lg shadow-md">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xs uppercase tracking-widest font-bold text-gray-500">Phone Number</h3>
-                                <a href="tel:7804138077" class="text-xl font-bold text-navy-900 hover:text-gold-600 transition-colors">
-                                    (780) 413-8077
-                                </a>
-                                <p class="text-xs text-charcoal-600 mt-0.5">Call directly during office hours</p>
-                            </div>
-                        </div>
-
-                        <!-- Address -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-lg shadow-md">
+                    <!-- Details Box -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-11 h-11 rounded-lg bg-red-100 text-brand-red flex items-center justify-center text-lg shrink-0">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <h3 class="text-xs uppercase tracking-widest font-bold text-gray-500">Office Location</h3>
-                                <p class="text-base font-bold text-navy-900">10020 101A Ave</p>
-                                <p class="text-sm text-charcoal-600">Edmonton, AB T5J 3G2, Canada</p>
+                                <h4 class="font-bold text-slate-900 text-sm">Shop Address</h4>
+                                <p class="text-slate-600 text-sm">4739 Telegraph Rd, Los Angeles, CA 90022</p>
+                                <span class="text-xs text-brand-red font-semibold">East Los Angeles Neighborhood</span>
                             </div>
                         </div>
 
-                        <!-- Hours -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-lg shadow-md">
-                                <i class="fa-solid fa-clock"></i>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-11 h-11 rounded-lg bg-red-100 text-brand-red flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <h3 class="text-xs uppercase tracking-widest font-bold text-gray-500">Office Hours</h3>
-                                <p class="text-base font-bold text-navy-900">Monday &ndash; Friday</p>
-                                <p class="text-sm text-charcoal-600">Standard Business Hours</p>
+                                <h4 class="font-bold text-slate-900 text-sm">Phone Number</h4>
+                                <a href="tel:3237801262" class="text-slate-900 font-bold hover:text-brand-red text-base transition">
+                                    (323) 780-1262
+                                </a>
+                                <p class="text-xs text-slate-500">Call for immediate quotes or service questions</p>
                             </div>
                         </div>
 
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-11 h-11 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="font-bold text-slate-900 text-sm mb-1">Hours of Operation</h4>
+                                <div class="space-y-1 text-xs text-slate-600">
+                                    <div class="flex justify-between border-b border-slate-100 pb-1">
+                                        <span>Monday – Friday:</span>
+                                        <span class="font-semibold text-slate-900">9:00 AM – 5:00 PM</span>
+                                    </div>
+                                    <div class="flex justify-between border-b border-slate-100 pb-1">
+                                        <span>Saturday:</span>
+                                        <span class="font-semibold text-slate-900">9:00 AM – 2:00 PM</span>
+                                    </div>
+                                    <div class="flex justify-between text-red-600 font-medium">
+                                        <span>Sunday:</span>
+                                        <span>Closed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Edmonton Location Panel Placeholder -->
-                    <div class="bg-navy-900 rounded-lg p-6 text-white border border-gold-500/30 relative overflow-hidden shadow-lg">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Downtown Edmonton Location</span>
-                            <i class="fa-solid fa-map-pin text-gold-400"></i>
-                        </div>
-                        <p class="text-sm text-gray-300 mb-4">Conveniently situated in central Edmonton, near courts and amenities.</p>
-                        <a href="https://maps.google.com/?q=10020+101A+Ave,+Edmonton,+AB+T5J+3G2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-gold-400 hover:text-white uppercase tracking-wider transition-colors">
-                            <span>Get Directions on Google Maps</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
+                    <!-- Map Preview Container -->
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200 h-52 relative">
+                        <iframe 
+                            title="TNT Auto Repair Map Location" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.923480072935!2d-118.15682182352841!3d34.02021671941913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cf5b8001a1a5%3A0x86b0391dcb0e4cd8!2s4739%20Telegraph%20Rd%2C%20Los%20Angeles%2C%20CA%2090022!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                            class="w-full h-full border-0" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
 
                 </div>
 
-                <!-- Right Contact Form Column -->
-                <div class="lg:col-span-7 scroll-reveal">
-                    <div class="bg-white rounded-xl p-8 sm:p-10 shadow-xl border border-gray-200 relative">
-                        <h3 class="font-serif text-2xl font-bold text-navy-900 mb-2">
-                            Request a Consultation
-                        </h3>
-                        <p class="text-sm text-charcoal-600 mb-6">
-                            Fill out the form below. Please avoid sending sensitive legal details until confidentiality is formally established.
-                        </p>
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-slate-200 relative">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Send a Message / Request Service</h3>
+                        <p class="text-xs text-slate-500 mb-6">Fill out the form below and our mechanics will get back to you promptly.</p>
 
-                        <!-- Form Feedback Notification Area -->
-                        <div id="contact-form-alert" class="hidden mb-6 p-4 rounded-md text-sm"></div>
-
-                        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-5">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label for="full-name" class="block text-xs font-bold uppercase tracking-wider text-navy-900 mb-2">Full Name *</label>
-                                    <input type="text" id="full-name" required placeholder="John Doe" class="w-full px-4 py-3 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500 focus:bg-white transition-all">
+                                    <label for="contactName" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Name *</label>
+                                    <input type="text" id="contactName" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
                                 </div>
                                 <div>
-                                    <label for="phone-number" class="block text-xs font-bold uppercase tracking-wider text-navy-900 mb-2">Phone Number *</label>
-                                    <input type="tel" id="phone-number" required placeholder="(780) 000-0000" class="w-full px-4 py-3 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500 focus:bg-white transition-all">
+                                    <label for="contactPhone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone Number *</label>
+                                    <input type="tel" id="contactPhone" required placeholder="(323) 555-0199" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label for="email-address" class="block text-xs font-bold uppercase tracking-wider text-navy-900 mb-2">Email Address *</label>
-                                    <input type="email" id="email-address" required placeholder="john@example.com" class="w-full px-4 py-3 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500 focus:bg-white transition-all">
+                                    <label for="contactVehicle" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Vehicle Year, Make, Model</label>
+                                    <input type="text" id="contactVehicle" placeholder="e.g. 2016 Toyota Camry" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
                                 </div>
                                 <div>
-                                    <label for="legal-matter" class="block text-xs font-bold uppercase tracking-wider text-navy-900 mb-2">Legal Matter *</label>
-                                    <select id="legal-matter" required class="w-full px-4 py-3 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500 focus:bg-white transition-all">
-                                        <option value="" disabled selected>Select a category...</option>
-                                        <option value="Criminal Law">Criminal Law</option>
-                                        <option value="Impaired Driving">Impaired Driving</option>
-                                        <option value="Bail Representation">Bail Representation</option>
-                                        <option value="Narcotics & Drug Offences">Narcotics & Drug Offences</option>
-                                        <option value="Family Law">Family Law</option>
-                                        <option value="Divorce & Separation">Divorce & Separation</option>
-                                        <option value="Child Custody & Support">Child Custody & Support</option>
-                                        <option value="Spousal Support">Spousal Support</option>
-                                        <option value="Other General Legal Practice">Other General Legal Matter</option>
+                                    <label for="contactService" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Service Needed</label>
+                                    <select id="contactService" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition bg-white">
+                                        <option value="Engine Diagnostic & Tuning">Engine Diagnostic & Tuning</option>
+                                        <option value="Carburetor Cleaning">Carburetor Cleaning</option>
+                                        <option value="Brake Repair & Replacement">Brake Repair & Replacement</option>
+                                        <option value="Oil Change & Filter Replacement">Oil Change & Air/Cabin Filters</option>
+                                        <option value="Steering & Suspension Repair">Steering & Suspension Repair</option>
+                                        <option value="A/C Installation & Repair">A/C Installation & Repair</option>
+                                        <option value="Battery Replacement & Electrical">Battery Replacement & Electrical Repair</option>
+                                        <option value="Exhaust System Repair & Replacement">Exhaust System Repair & Replacement</option>
+                                        <option value="Body & Trim Repair">Body & Trim Repair / Touch-Up</option>
+                                        <option value="Water Leak Repair">Vehicle Water Leak Repair</option>
+                                        <option value="Auto Detailing">Auto Detailing & Engine Wash</option>
+                                        <option value="General Mechanical Maintenance">General Maintenance & Mechanical Repair</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div>
-                                <label for="message" class="block text-xs font-bold uppercase tracking-wider text-navy-900 mb-2">Message / Brief Description *</label>
-                                <textarea id="message" rows="4" required placeholder="Please outline your inquiry..." class="w-full px-4 py-3 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500 focus:bg-white transition-all resize-none"></textarea>
+                                <label for="contactMessage" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Message / Noise Description</label>
+                                <textarea id="contactMessage" rows="4" placeholder="Describe the problem, symptoms, or service you need..." class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition"></textarea>
                             </div>
 
-                            <div class="pt-2">
-                                <button type="submit" id="submit-btn" class="w-full py-4 bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm tracking-widest uppercase rounded shadow-lg hover:shadow-gold-500/10 transition-all flex items-center justify-center gap-2">
-                                    <span>REQUEST A CONSULTATION</span>
-                                    <i class="fa-solid fa-paper-plane text-gold-400"></i>
-                                </button>
-                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-sm uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2">
+                                <i class="fa-paper-plane text-brand-red"></i>
+                                <span>Request Service Appointment</span>
+                            </button>
                         </form>
+
+                        <!-- Success Message Box (Hidden Initially) -->
+                        <div id="formSuccessMessage" class="hidden p-6 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-center space-y-3 mt-4">
+                            <div class="w-12 h-12 rounded-full bg-emerald-500 text-white mx-auto flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h4 class="font-bold text-lg">Thank You! Your Request Has Been Sent.</h4>
+                            <p class="text-xs text-emerald-800">Our mechanics at TNT Auto Repair will review your details and contact you shortly at your phone number.</p>
+                            <button onclick="resetContactForm()" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-lg transition">
+                                Send Another Message
+                            </button>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
-    <!-- FOOTER SECTION -->
-    <footer class="bg-navy-900 text-white border-t-2 border-gold-500 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 
-                <!-- Left Firm Brand -->
-                <div class="md:col-span-5 space-y-4">
+                <!-- Col 1: Shop Brand -->
+                <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded border border-gold-500/40 bg-navy-800 flex items-center justify-center">
-                            <i class="fa-solid fa-scale-balanced text-gold-500"></i>
+                        <div class="w-9 h-9 bg-brand-red rounded-lg flex items-center justify-center text-white text-lg font-black">
+                            <i class="fa-solid fa-wrench"></i>
                         </div>
-                        <div>
-                            <span class="font-serif text-2xl font-bold tracking-wider text-white block leading-none">KLASSEN LAW OFFICE</span>
-                            <span class="text-xs uppercase tracking-widest text-gold-400 font-medium block mt-1">General Practice Attorney</span>
-                        </div>
+                        <span class="font-display font-black text-xl text-white tracking-tight">
+                            TNT <span class="text-brand-red">AUTO REPAIR</span>
+                        </span>
                     </div>
-                    <p class="text-gray-300 text-sm max-w-sm font-light leading-relaxed">
-                        Professional legal representation and guidance in Edmonton, Alberta. Dedicated to protecting your rights with client-centered legal strategy.
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Reliable automotive repair and general mechanical maintenance in East Los Angeles. Honest service, transparent pricing, and quality workmanship.
                     </p>
+                    <div class="text-xs text-amber-400 font-semibold">
+                        <i class="fa-solid fa-language text-brand-red"></i> Se Habla Español
+                    </div>
                 </div>
 
-                <!-- Middle Quick Links -->
-                <div class="md:col-span-3">
-                    <h4 class="font-serif text-lg font-bold text-gold-400 uppercase tracking-wider mb-4">QUICK LINKS</h4>
-                    <ul class="space-y-2.5 text-sm text-gray-300">
-                        <li><a href="#home" class="hover:text-gold-400 transition-colors">Home</a></li>
-                        <li><a href="#about" class="hover:text-gold-400 transition-colors">About</a></li>
-                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Services</a></li>
-                        <li><a href="#why-choose-us" class="hover:text-gold-400 transition-colors">Why Choose Us</a></li>
-                        <li><a href="#testimonials" class="hover:text-gold-400 transition-colors">Testimonials</a></li>
-                        <li><a href="#contact" class="hover:text-gold-400 transition-colors">Contact</a></li>
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-brand-red transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-red transition">About TNT Repair</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition">Services & Mechanics</a></li>
+                        <li><a href="#why-us" class="hover:text-brand-red transition">Why Choose Us</a></li>
+                        <li><a href="#reviews" class="hover:text-brand-red transition">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-brand-red transition">Contact & Hours</a></li>
                     </ul>
                 </div>
 
-                <!-- Right Contact Summary -->
-                <div class="md:col-span-4 space-y-3">
-                    <h4 class="font-serif text-lg font-bold text-gold-400 uppercase tracking-wider mb-4">CONTACT</h4>
-                    <p class="text-sm text-gray-300 flex items-center gap-3">
-                        <i class="fa-solid fa-phone text-gold-500 w-4"></i>
-                        <a href="tel:7804138077" class="hover:text-gold-400 font-medium">(780) 413-8077</a>
-                    </p>
-                    <p class="text-sm text-gray-300 flex items-start gap-3">
-                        <i class="fa-solid fa-location-dot text-gold-500 w-4 mt-1"></i>
-                        <span>10020 101A Ave<br>Edmonton, AB T5J 3G2, Canada</span>
-                    </p>
+                <!-- Col 3: Main Services -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Our Services</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="hover:text-brand-red transition">Computer Engine Diagnostics</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition">Brake Pad & Rotor Replacement</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition">Oil Change & Preventive Care</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition">Engine Overhauls & Rebuilding</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition">Suspension, Struts & Steering</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition">Battery, Alternator & Electrical</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact & Shop Info -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Contact Info</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-brand-red mt-0.5"></i>
+                            <span>4739 Telegraph Rd,<br>Los Angeles, CA 90022</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-brand-red"></i>
+                            <a href="tel:3237801262" class="hover:text-white font-bold text-slate-200">(323) 780-1262</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-clock text-slate-500 mt-0.5"></i>
+                            <div>
+                                <div>Mon-Fri: 9:00 AM – 5:00 PM</div>
+                                <div>Sat: 9:00 AM – 2:00 PM</div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
 
-            <!-- Bottom Copyright Bar -->
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-                <p>&copy; 2026 Klassen Law Office. All Rights Reserved.</p>
-                <div class="flex space-x-6">
-                    <button onclick="openModal('privacy-modal')" class="hover:text-gold-400 transition-colors">Privacy Policy</button>
-                    <button onclick="openModal('terms-modal')" class="hover:text-gold-400 transition-colors">Terms & Conditions</button>
+            <!-- Bottom Copyright Line -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <div>
+                    © 2026 TNT Auto Repair / Mecánico General. All Rights Reserved.
+                </div>
+                <div class="flex gap-4">
+                    <span>East Los Angeles, CA</span>
+                    <span>•</span>
+                    <span>Dependable Mechanical Care</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- CONSULTATION MODAL -->
-    <div id="consultation-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-navy-900/80 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-gold-500/30 animate-fade-in">
-            <button onclick="closeConsultationModal()" aria-label="Close consultation modal" class="absolute top-4 right-4 text-gray-400 hover:text-navy-900 text-xl p-2">
+    <!-- Interactive Repair Estimate Calculator Modal -->
+    <div id="estimateModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white text-slate-900 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-xl focus:outline-none">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <div class="text-center mb-6">
-                <div class="w-12 h-12 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center mx-auto mb-3 text-xl">
-                    <i class="fa-solid fa-calendar-check"></i>
+            <div class="mb-6">
+                <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-red bg-red-50 px-2.5 py-1 rounded-md mb-2">
+                    <i class="fa-solid fa-calculator"></i> Interactive Tool
                 </div>
-                <h3 class="font-serif text-2xl font-bold text-navy-900">Schedule a Consultation</h3>
-                <p class="text-xs text-charcoal-600 mt-1">Direct callback request for Edmonton legal services</p>
+                <h3 class="font-display text-2xl font-black text-slate-900">Repair Estimate Calculator</h3>
+                <p class="text-xs text-slate-500">Select your service details for an estimated quote range.</p>
             </div>
 
-            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+            <div class="space-y-4">
                 <div>
-                    <label for="modal-name" class="block text-xs font-bold uppercase text-navy-900 mb-1">Full Name</label>
-                    <input type="text" id="modal-name" required placeholder="John Smith" class="w-full px-4 py-2.5 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500">
-                </div>
-                <div>
-                    <label for="modal-phone" class="block text-xs font-bold uppercase text-navy-900 mb-1">Phone Number</label>
-                    <input type="tel" id="modal-phone" required placeholder="(780) 413-8077" class="w-full px-4 py-2.5 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500">
-                </div>
-                <div>
-                    <label for="modal-email" class="block text-xs font-bold uppercase text-navy-900 mb-1">Email</label>
-                    <input type="email" id="modal-email" required placeholder="john@example.com" class="w-full px-4 py-2.5 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500">
-                </div>
-                <div>
-                    <label for="modal-service" class="block text-xs font-bold uppercase text-navy-900 mb-1">Area of Inquiry</label>
-                    <select id="modal-service" class="w-full px-4 py-2.5 bg-charcoal-50 border border-gray-300 rounded text-sm focus:outline-none focus:border-gold-500">
-                        <option value="General Practice">General Practice</option>
-                        <option value="Criminal Law">Criminal Law</option>
-                        <option value="Impaired Driving">Impaired Driving</option>
-                        <option value="Family Law">Family Law</option>
-                        <option value="Bail Representation">Bail Representation</option>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Select Service Category</label>
+                    <select id="calcService" onchange="calculateEstimate()" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-brand-red outline-none bg-white font-medium">
+                        <option value="oil">Oil Change & Air/Cabin Filters</option>
+                        <option value="brake">Brake Pad & Rotor Replacement</option>
+                        <option value="diag">Engine Diagnostic & Tuning Scan</option>
+                        <option value="battery">Battery Test & Replacement</option>
+                        <option value="ac">A/C Inspection, Recharge & Repair</option>
+                        <option value="suspension">Steering & Suspension Repair</option>
+                        <option value="exhaust">Exhaust System Repair & Muffler</option>
+                        <option value="leak">Vehicle Water Leak Repair & Seals</option>
+                        <option value="carb">Carburetor Cleaning & Adjustment</option>
+                        <option value="detailing">Auto Detailing & Engine Wash</option>
+                        <option value="other">General Mechanical Repair Consultation</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full py-3 bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-widest rounded shadow-md mt-2">
-                    SUBMIT CONSULTATION REQUEST
-                </button>
-            </form>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Vehicle Type</label>
+                        <select id="calcVehicle" onchange="calculateEstimate()" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-brand-red outline-none bg-white">
+                            <option value="sedan">Sedan / Hatchback</option>
+                            <option value="suv">SUV / Crossover</option>
+                            <option value="truck">Pickup Truck / Van</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Urgency</label>
+                        <select id="calcUrgency" onchange="calculateEstimate()" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-brand-red outline-none bg-white">
+                            <option value="standard">Standard Scheduling</option>
+                            <option value="today">Same-Day / Immediate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Calculated Output Card -->
+                <div class="p-5 rounded-xl bg-slate-900 text-white border border-slate-800 text-center space-y-1">
+                    <span class="text-xs text-slate-400 font-medium">Estimated Labor & Parts Range *</span>
+                    <div id="estimateResult" class="text-3xl font-black text-amber-400">$45 – $75</div>
+                    <div class="text-[11px] text-slate-400 italic">Exact pricing provided after in-person shop diagnosis.</div>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                    <a href="tel:3237801262" class="w-full py-3.5 rounded-xl bg-brand-red hover:bg-red-700 text-white font-extrabold text-sm uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-lg transition">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call (323) 780-1262 to Confirm</span>
+                    </a>
+                    <button onclick="closeModal()" class="w-full py-2.5 text-xs font-semibold text-slate-500 hover:text-slate-800 transition">
+                        Close Calculator
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- DYNAMIC SERVICE DETAIL MODAL -->
-    <div id="service-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-navy-900/80 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-xl w-full p-6 sm:p-8 relative shadow-2xl border border-gold-500/30">
-            <button onclick="closeServiceModal()" aria-label="Close service details modal" class="absolute top-4 right-4 text-gray-400 hover:text-navy-900 text-xl p-2">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div id="service-modal-content" class="space-y-4">
-                <!-- Content dynamically injected via JavaScript -->
-            </div>
-            
-            <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row gap-3">
-                <button onclick="closeServiceModal(); openConsultationModal();" class="flex-1 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-xs uppercase tracking-widest rounded text-center">
-                    Book Consultation
-                </button>
-                <a href="tel:7804138077" class="flex-1 py-3 bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-widest rounded text-center">
-                    Call (780) 413-8077
-                </a>
-            </div>
-        </div>
+    <!-- Floating Mobile Call Button -->
+    <div class="fixed bottom-4 right-4 z-40 sm:hidden">
+        <a href="tel:3237801262" class="w-14 h-14 bg-brand-red text-white rounded-full flex items-center justify-center text-xl shadow-2xl shadow-red-950 border-2 border-white animate-pulse-subtle">
+            <i class="fa-solid fa-phone"></i>
+        </a>
     </div>
 
-    <!-- PRIVACY POLICY MODAL -->
-    <div id="privacy-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-navy-900/80 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl">
-            <button onclick="closeModal('privacy-modal')" aria-label="Close Privacy Policy" class="absolute top-4 right-4 text-gray-400 hover:text-navy-900 text-xl p-2">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <h3 class="font-serif text-2xl font-bold text-navy-900 mb-4">Privacy Policy</h3>
-            <div class="text-sm text-charcoal-600 space-y-3 max-h-96 overflow-y-auto pr-2">
-                <p>Klassen Law Office is committed to safeguarding client privacy and protecting confidential information in accordance with Alberta's Freedom of Information and Protection of Privacy standards and law society guidelines.</p>
-                <p>Submitting inquiry forms does not automatically establish a lawyer-client relationship. Please do not submit confidential information until formal counsel engagement is confirmed.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- TERMS MODAL -->
-    <div id="terms-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-navy-900/80 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl">
-            <button onclick="closeModal('terms-modal')" aria-label="Close Terms & Conditions" class="absolute top-4 right-4 text-gray-400 hover:text-navy-900 text-xl p-2">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <h3 class="font-serif text-2xl font-bold text-navy-900 mb-4">Terms & Conditions</h3>
-            <div class="text-sm text-charcoal-600 space-y-3 max-h-96 overflow-y-auto pr-2">
-                <p>The information provided on this website is intended for general informational purposes only and does not constitute formal legal advice. You should consult a qualified general practice attorney in Edmonton, AB for advice regarding your individual situation.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- JAVASCRIPT CONTROLLERS -->
+    <!-- JavaScript Code -->
     <script>
-        
-        // Sticky Header Scroll Handler
-        const header = document.getElementById('main-header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('nav-solid');
-            } else {
-                header.classList.remove('nav-solid');
-            }
-        });
+        let currentCategory = 'all';
 
-        // Mobile Menu Toggle Logic
-        const menuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileDrawer = document.getElementById('mobile-drawer');
-        const menuIcon = document.getElementById('menu-icon');
-
-        menuToggle.addEventListener('click', () => {
-            mobileDrawer.classList.toggle('hidden');
-            if (mobileDrawer.classList.contains('hidden')) {
-                menuIcon.className = 'fa-solid fa-bars';
-            } else {
-                menuIcon.className = 'fa-solid fa-xmark';
-            }
-        });
-
-        // Close mobile drawer on link click
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileDrawer.classList.add('hidden');
-                menuIcon.className = 'fa-solid fa-bars';
-            });
-        });
-
-        // Intersection Observer for Scroll Reveal Animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
+        function setServiceCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.getAttribute('data-cat') === cat) {
+                    btn.classList.add('bg-brand-red', 'text-white', 'border-brand-red');
+                    btn.classList.remove('bg-slate-800', 'text-slate-300', 'border-slate-700');
+                } else {
+                    btn.classList.remove('bg-brand-red', 'text-white', 'border-brand-red');
+                    btn.classList.add('bg-slate-800', 'text-slate-300', 'border-slate-700');
                 }
             });
-        }, observerOptions);
+            filterServices();
+        }
 
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-            revealObserver.observe(el);
+        function filterServices() {
+            const query = (document.getElementById('serviceSearchInput').value || '').toLowerCase().trim();
+            const cards = document.querySelectorAll('.service-card');
+
+            cards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const keywords = card.getAttribute('data-keywords').toLowerCase();
+                const cardText = card.innerText.toLowerCase();
+
+                const matchesCat = (currentCategory === 'all' || category === currentCategory);
+                const matchesQuery = !query || keywords.includes(query) || cardText.includes(query);
+
+                if (matchesCat && matchesQuery) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Modal Control
+        function openModal() {
+            document.getElementById('estimateModal').classList.remove('hidden');
+            calculateEstimate();
+        }
+
+        function closeModal() {
+            document.getElementById('estimateModal').classList.add('hidden');
+        }
+
+        // Calculate Estimate Logic
+        function calculateEstimate() {
+            const service = document.getElementById('calcService').value;
+            const vehicle = document.getElementById('calcVehicle').value;
+            
+            let price = "$50 – $80";
+
+            if (service === 'oil') {
+                price = vehicle === 'truck' ? "$65 – $95" : "$45 – $75";
+            } else if (service === 'brake') {
+                price = vehicle === 'truck' ? "$160 – $240" : "$130 – $195";
+            } else if (service === 'diag') {
+                price = "$65 – $95";
+            } else if (service === 'battery') {
+                price = "$120 – $185";
+            } else if (service === 'ac') {
+                price = "$95 – $175";
+            } else if (service === 'suspension') {
+                price = "$180 – $350+";
+            } else if (service === 'exhaust') {
+                price = "$120 – $280";
+            } else if (service === 'leak') {
+                price = "$85 – $160";
+            } else if (service === 'carb') {
+                price = "$90 – $160";
+            } else if (service === 'detailing') {
+                price = "$75 – $150";
+            } else {
+                price = "Custom Quote Upon Inspection";
+            }
+
+            document.getElementById('estimateResult').innerText = price;
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // Contact Form Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('contactForm').classList.add('hidden');
+            document.getElementById('formSuccessMessage').classList.remove('hidden');
+        }
+
+        function resetContactForm() {
+            document.getElementById('contactForm').reset();
+            document.getElementById('contactForm').classList.remove('hidden');
+            document.getElementById('formSuccessMessage').classList.add('hidden');
+        }
+
+        // Dynamic Open/Closed Status Indicator
+        function updateShopStatus() {
+            const now = new Date();
+            const day = now.getDay();
+            const hour = now.getHours();
+
+            const statusElem = document.getElementById('shopStatusText');
+            if (!statusElem) return;
+
+            if (day === 0) { // Sunday
+                statusElem.innerText = "Closed Today (Opens Monday 9:00 AM)";
+                statusElem.parentElement.classList.remove('text-emerald-400');
+                statusElem.parentElement.classList.add('text-amber-400');
+            } else if (day === 6) { // Saturday
+                if (hour >= 9 && hour < 14) {
+                    statusElem.innerText = "Open Today until 2:00 PM";
+                } else {
+                    statusElem.innerText = "Closed (Opens Monday 9:00 AM)";
+                }
+            } else { // Mon-Fri
+                if (hour >= 9 && hour < 17) {
+                    statusElem.innerText = "Open Today: 9:00 AM – 5:00 PM";
+                } else if (hour < 9) {
+                    statusElem.innerText = "Opening Today at 9:00 AM";
+                } else {
+                    statusElem.innerText = "Closed for Today (Opens Tomorrow 9:00 AM)";
+                }
+            }
+        }
+
+        // Initialize on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            updateShopStatus();
         });
 
-        // Consultation Modal Functions
-        function openConsultationModal() {
-            document.getElementById('consultation-modal').classList.remove('hidden');
-        }
-
-        function closeConsultationModal() {
-            document.getElementById('consultation-modal').classList.add('hidden');
-        }
-
-        function openModal(id) {
-            document.getElementById(id).classList.remove('hidden');
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-        }
-
-        // Service Details Data & Dynamic Modal Injection
-        const serviceData = {
-            'criminal-law': {
-                title: 'Criminal Law Representation',
-                icon: 'fa-shield-halved',
-                description: 'Klassen Law Office provides strategic defense and legal advice for individuals facing criminal charges under the Criminal Code of Canada. From pre-charge investigation guidance through trials and proceedings, we work to protect your rights and advocate for the best possible legal outcome.'
-            },
-            'impaired-driving': {
-                title: 'Impaired Driving & DUI Defense',
-                icon: 'fa-car-burst',
-                description: 'Facing impaired driving allegations can carry significant penalties including license suspensions and fines. We offer knowledgeable guidance reviewing breathalyzer procedure validity, roadside stops, and constitutional rights safeguards under Canadian law.'
-            },
-            'bail': {
-                title: 'Bail & Judicial Release Representation',
-                icon: 'fa-key',
-                description: 'Securing immediate release is crucial. We handle urgent bail hearings in Edmonton and surrounding jurisdictions, presenting strong release plans to assist clients in obtaining interim freedom while awaiting trial.'
-            },
-            'narcotics': {
-                title: 'Narcotics & Drug Offences',
-                icon: 'fa-capsules',
-                description: 'Legal representation for simple possession, distribution, and complex drug allegations. We rigorously examine search warrants, police conduct, and evidentiary details.'
-            },
-            'family-law': {
-                title: 'Family Law & Domestic Matters',
-                icon: 'fa-people-roof',
-                description: 'Navigating domestic legal matters requires balanced legal skill and empathy. We assist with cohabitation agreements, family dispute resolution, property division, and parental obligations.'
-            },
-            'divorce': {
-                title: 'Divorce & Legal Separation',
-                icon: 'fa-file-contract',
-                description: 'Assisting clients through both contested and amicable divorce procedures. We ensure comprehensive drafting of separation agreements, spousal interests, and asset division.'
-            },
-            'child-custody': {
-                title: 'Child Custody & Support',
-                icon: 'fa-child-reaching',
-                description: 'Protecting the best interests of children while securing fair parenting schedules, decision-making arrangements, and child support calculations aligned with Federal Child Support Guidelines.'
-            },
-            'spousal-support': {
-                title: 'Spousal Support Guidance',
-                icon: 'fa-hand-holding-dollar',
-                description: 'Clear legal determination of entitlement, duration, and quantum of spousal support under the Spousal Support Advisory Guidelines (SSAG) in Alberta.'
-            }
-        };
-
-        function openServiceModal(serviceKey) {
-            const service = serviceData[serviceKey];
-            if (!service) return;
-
-            const contentContainer = document.getElementById('service-modal-content');
-            contentContainer.innerHTML = `
-                <div class="w-12 h-12 rounded bg-gold-100 text-gold-600 flex items-center justify-center text-xl mb-2">
-                    <i class="fa-solid ${service.icon}"></i>
-                </div>
-                <h3 class="font-serif text-2xl font-bold text-navy-900">${service.title}</h3>
-                <p class="text-sm text-charcoal-600 leading-relaxed">${service.description}</p>
-                <div class="p-3 bg-charcoal-50 rounded text-xs text-navy-900 font-medium border-l-2 border-gold-500">
-                    <i class="fa-solid fa-circle-info text-gold-600 mr-1"></i> Serving Downtown Edmonton & Alberta Courts.
-                </div>
-            `;
-
-            document.getElementById('service-modal').classList.remove('hidden');
-        }
-
-        function closeServiceModal() {
-            document.getElementById('service-modal').classList.add('hidden');
-        }
-
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            const alertBox = document.getElementById('contact-form-alert');
-            const submitBtn = document.getElementById('submit-btn');
-
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Sending Request...';
-
-            setTimeout(() => {
-                alertBox.className = "mb-6 p-4 rounded-md text-sm bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-center gap-3";
-                alertBox.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i> <div><strong>Thank you!</strong> Your consultation request has been received. Our office will contact you shortly at (780) 413-8077.</div>';
-                
-                document.getElementById('contact-form').reset();
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<span>REQUEST A CONSULTATION</span> <i class="fa-solid fa-paper-plane text-gold-400"></i>';
-            }, 1000);
-        }
-
-        function handleModalSubmit(e) {
-            e.preventDefault();
-            alert('Thank you for contacting Klassen Law Office. We have received your consultation request and will respond promptly.');
-            closeConsultationModal();
-        }
-
-        // Close modals on clicking backdrop
+        // Close modal when clicking outside contents
         window.onclick = function(event) {
-            const modals = ['consultation-modal', 'service-modal', 'privacy-modal', 'terms-modal'];
-            modals.forEach(id => {
-                const modal = document.getElementById(id);
-                if (event.target === modal) {
-                    modal.classList.add('hidden');
-                }
-            });
+            const modal = document.getElementById('estimateModal');
+            if (event.target === modal) {
+                closeModal();
+            }
         };
     </script>
 </body>
